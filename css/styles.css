@@ -671,6 +671,7 @@ display: inline-grid;
     padding: 15px 16px;
     min-width: 358px;
     height: 50px;
+    color:var(--primary-white-color);
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -685,7 +686,7 @@ display: inline-grid;
     height: 50px;
     display: flex;
     color: var(--primary-white-color);
-        background-color: var(--accent-color);
+    background-color: var(--accent-color);
     /* color: var(--primary-text-color);
     background-color: var(--silver-bgc); */
     font-family: Roboto;
@@ -809,7 +810,8 @@ display: inline-grid;
      min-height: 100%;
      background-color: rgba(0, 0, 0, 0.2);
      opacity: 1;
-     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
  }
 
  .backdrop.is-hidden {
@@ -852,7 +854,6 @@ display: inline-grid;
      margin: 0;
      width: 30px;
      height: 30px;
-
      background-color: var(--primary-white-color);
      border-radius: 50%;
      border: 1px solid rgba(0, 0, 0, 0.1);
@@ -862,8 +863,9 @@ display: inline-grid;
  }
 
  .close-icon {
-     width: 18px;
-     height: 18px;
+     width: 30px;
+     height: 30px;
+     color: var(--p-text-color);
      fill: currentColor;
      transition-property: transform, background-color;
      transition-duration: var(--transition-duration);
@@ -1115,6 +1117,9 @@ display: inline-grid;
      top: 50%;
      transform: translateY(-50%);
      fill: #000000;
+    transition: fill;
+     transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
     
  }
 
@@ -1159,6 +1164,10 @@ display: inline-grid;
 }
 .modal-checkbox-input:checked + .modal-icon-check {
     background-color: var(--accent-color);
+    transition: background-color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
 }
 .modal-checkbox-input:checked+.modal-icon-check .modal-form-checkbox-icon {
     display: block;
